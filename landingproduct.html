@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            height: 100vh;
+        }
+        body{
+            overflow: hidden;
+        }
+        h1{
+            writing-mode: vertical-rl;
+            transform:rotate(180deg)
+        }
+        #secondgrid{
+            display: grid;
+            width: 96%;
+            grid-template-columns: 0.5fr 2fr;
+        }
+        #daily{
+            display: flex;
+            justify-content: space-around;
+            color: white;
+        }
+        #firstitem{
+            background-color: rgb(17, 17, 75);
+            position: relative;
+        }
+        #insta{
+            filter: invert(1);
+            width: 100%;
+            height: 100%;
+        }
+        h1{
+            color: white;
+            font-size: 470%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 18px;
+  background-color: #eee;
+  border-radius: 50px;
+}
+
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+input:focus{
+    outline: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+select:focus{
+    outline: none;
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+button:hover{
+    cursor: pointer;
+}
+#minus:hover{
+    cursor: pointer;
+}
+.img:hover{
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="firstitem">
+            <div id="daily">
+                <h3>#DAILY.</h3>
+                <p>En/<span style="color: lightgray;">Ru</span></p>
+            </div>
+            <div style="position: absolute; z-index: 1; bottom: 150px; transform: rotate(30deg); left: 100px;">
+                <img src="gray.png" style='width: 200%; height: 200%;' alt="">
+            </div>
+            <br>
+            <br>
+            <br>
+            <div>
+                <h1>
+                    SNEAKERS
+                </h1>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div style="display: flex;justify-content: center;">
+                <div style="height: 3em; width: 5rem;"><img id="insta" class="img" src="facebookinsta-removebg-preview.png" alt=""></div>
+            </div>
+        </div>
+        <div id="secondgrid">
+            <div style="display:flex; align-items: center;">
+                <p style="font-size: 300%; color: lightgray;">FOR MAN</p>
+            </div>
+            <div>
+                <div style="display: flex;justify-content: space-between;">
+                    <div style="display: flex;width: 60%;" >
+                        <input type="search" name="" id=""
+                            style="border-top-left-radius: 50px;border-bottom-left-radius: 50px; background-color: rgb(218, 246, 255); width: 90%; border: none; padding-left: 5px;"
+                            placeholder="Search">
+                        <div style="height: 2em; width: 2rem;"><img class="img" style="background-color:rgb(218, 246, 255);width: 100%;height: 100%;border-top-right-radius: 50px;border-bottom-right-radius: 50px;" src="images-removebg-preview.png" alt=""></div>
+                    </div>
+                    <div style="display: flex;justify-content: space-between;">
+                    <div style="height: 2em; width: 2rem;"><img class="img" style='width:100%; height: 100%;'src="shopping-cart-icon-vector-eps-trolley-logo-web-icons-shop-button-182252657-removebg-preview.png" alt=""></div>
+                    <p style="display: flex; align-self: center; background-color: rgb(181, 181, 181); border-radius: 50px;-webkit-background-clip: border-box;padding: 2px;">0</p>
+                    <div style="height: 2em; width: 2rem;"><img class='img' style='width:100%; height: 100%;' src="menu-removebg-preview.png" alt=""></div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <p>Man > Shoes > <span style="color:lightgray">Grey Running Sneakers</span></p>
+                <br>
+                <br>
+                <h2 style="width: 50%; font-size: 300%;">Grey Running Sneakers</h2>
+                <br>
+                <br>
+                <div style="display: flex; width: 25%; justify-content: space-between;">
+                    <p style="font-size: xx-large;">$59.99</p>
+                    <p style="align-self: center; color: lightgray; text-decoration: line-through;">$69.99</p>
+                </div>
+                <br>
+                <p>Neoprene and membrane boots. Rubber insert with lacing over the foot and back on head. Lining and inside of the membrane</p>
+                <br>
+                <br>
+                <div style="display: flex; justify-content: space-between; width: 70%;">
+                    <div>
+                        <p style="text-align: center;">COLOR</p>
+                        <div style="margin-top:0.4rem;border: 1px solid; text-align: center;border-radius: 50px; padding: 5px; border-color: lightgrey; display: flex; justify-content: space-between;width: 105%;">
+                        <label>Blue
+                            <input type="radio" checked="checked">
+                        </label>
+                        <label>Green
+                            <input type="radio">
+                        </label>
+                        <label>Yellow
+                            <input type="radio">
+                        </label>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="text-align: center;">SIZE</p>
+                        <select style='margin-top:0.4rem;border-radius: 50px; width: 150%; padding: 5px;'name="" id="">
+                            <option value="48" selected>48</option>
+                        </select>
+                    </div>
+                    <div style="text-align: center;">
+                        <p>QUANTITY</p>
+                        <div style="margin-top:0.4rem;display: flex; justify-content: space-evenly;border: 1px solid lightgray; padding: 3px; border-radius: 50px;">
+                            <p id="minus">-</p>
+                            <p style="align-self: center;">3</p>
+                            <p id="minus">+</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div style="display: flex; justify-content: space-between; width: 70%;">
+                    <button style=" border:none;border-radius: 50px; background-color: rgb(0, 159, 212); color: white; padding: 10px; width: 50%;">Add To Cart.</button>
+                    <p style="align-self: center;">Save To Wishlist</p>
+                </div>
+                <br>
+                <br>
+                <p style="color: lightgrey;">Standard delivery in 2-4 days or Premium Delivery in 2-4 hours</p>
+            </div>
+        </div>
+    </div>
+    <script src="landingproduct.js"></script>
+</body>
+</html>
